@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Plan Meals for the Week</h1>
+<form method="POST">
+    {% for day in days %}
+        <p>
+          <label>{{ day }}</label><br>
+          <select name="{{ day }}">
+            <option value="">-- choose a meal --</option>
+            {% for meal in meals %}
+              <option value="{{ meal.id }}">{{ meal.name }}</option>
+            {% endfor %}
+          </select>
+        </p>
+    {% endfor %}
+    <p><input type="submit" value="Save Plan"></p>
+</form>
+{% endblock %}

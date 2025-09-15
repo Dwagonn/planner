@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>All Meals</h1>
+<ul>
+  {% for meal in meals %}
+    <li><strong>{{ meal.name }}</strong>: {{ meal.ingredients }}</li>
+  {% else %}
+    <li>No meals yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

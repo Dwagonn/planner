@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Your Meal Plan</h1>
+<ul>
+  {% for day, meal in plan.items() %}
+    <li><strong>{{ day }}:</strong> {{ meal.name if meal else "No meal planned" }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

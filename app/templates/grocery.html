@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Grocery List</h1>
+<ul>
+  {% for item in groceries %}
+    <li>{{ item }}</li>
+  {% else %}
+    <li>No items. Plan some meals!</li>
+  {% endfor %}
+</ul>
+{% endblock %}

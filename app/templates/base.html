@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('main.index') }}">Home</a> |
+        <a href="{{ url_for('main.add_meal') }}">Add Meal</a> |
+        <a href="{{ url_for('main.plan') }}">Plan Meals</a> |
+        <a href="{{ url_for('main.view_plan') }}">View Plan</a> |
+        <a href="{{ url_for('main.grocery') }}">Grocery List</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
